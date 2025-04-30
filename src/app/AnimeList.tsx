@@ -33,7 +33,7 @@ export default function AnimeList() {
   }, []);
 
   return (
-    <div className="grid grid-cols-[repeat(5,215px)] justify-center align-middle gap-x-12 gap-y-12">
+    <div className="grid grid-cols-[repeat(5,215px)] justify-center align-middle gap-x-12 gap-y-12 overflow-y-auto overflow-x-hidden">
         {animes.map((anime) => (
           <div className="bg-[#B6EADA] flex flex-col justify-top items-center px-1 py-1"  key={anime.mal_id}>
             <img className="h-[305px] w-[215px]" src={anime.images.jpg.image_url} alt={anime.title} />
